@@ -1,0 +1,461 @@
+﻿<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+<meta charset="utf-8">
+<title>广播节目回听下载</title>
+<meta name="viewport"
+	content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width">
+
+<!--[if lt IE 9]><script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<link rel="stylesheet" href="style.css" media="screen">
+<!--[if lte IE 7]><link rel="stylesheet" href="style.ie7.css" media="screen" /><![endif]-->
+<link rel="stylesheet" href="style.responsive.css" media="all">
+<link href="poshytip/tip-yellow/tip-yellow.css" rel="stylesheet">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="jqueryui/css/cupertino/jquery-ui-1.10.4.custom.min.css" rel="stylesheet" >
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="jqueryui/development-bundle/ui/jquery.ui.core.js"></script>
+<script src="jqueryui/development-bundle/ui/jquery.ui.datepicker.js"></script>
+<script src="poshytip/jquery.poshytip.min.js"></script>
+
+<script src="script.js"></script>
+<script src="script.responsive.js"></script>
+<meta name="description" content="Description">
+<meta name="keywords" content="Keywords">
+
+</head>
+<body>
+	<div id="art-main">
+		<header class="art-header">
+
+			<div class="art-shapes">
+				<div class="art-object1364642645" data-left="0%"></div>
+
+			</div>
+
+			<h1 class="art-headline" data-left="5.35%">
+				<a href="#">SMG Radio Program</a>
+			</h1>
+			<h2 class="art-slogan" data-left="4.66%">online playback &amp;
+				download service</h2>
+		</header>
+		<div class="art-sheet clearfix" style="margin-top:-10px;">
+			<div class="art-layout-wrapper">
+				<div class="art-content-layout">
+					<div class="art-content-layout-row">
+						<div class="art-layout-cell art-content">
+							<article class="art-post art-article">
+
+								<div class="art-postcontent art-postcontent-0 clearfix">
+									<div class="art-content-layout layout-item-0">
+										<div class="art-content-layout-row">
+											<div class="art-layout-cell" style="width: 100%">
+												<p>
+												<div class="btn-group" style="margin-left:10px">
+												
+												  <button type="button" class="btn btn-default" onclick="changeChannel('990')"><strong>990</strong></button>
+												  <button type="button" class="btn btn-default" onclick="changeChannel('1296')"><strong>1296</strong></button>
+												  <button type="button" class="btn btn-default" onclick="changeChannel('1422')"><strong>1422</strong></button>
+												  <button type="button" class="btn btn-default" onclick="changeChannel('977')"><strong>977</strong></button>
+												  <button type="button" class="btn btn-default" onclick="changeChannel('792')"><strong>792</strong></button>
+												  <button type="button" class="btn btn-default" onclick="changeChannel('648')"><strong>648</strong></button>
+												  <button type="button" class="btn btn-default" onclick="changeChannel('947')"><strong>94.7</strong></button>
+												  <button type="button" class="btn btn-default" onclick="changeChannel('1072')"><strong>107.2</strong></button>
+												  <button type="button" class="btn btn-default" onclick="changeChannel('1017')"><strong>101.7</strong></button>
+												  <button type="button" class="btn btn-default" onclick="changeChannel('1037')"><strong>103.7</strong></button>
+												  <button type="button" class="btn btn-default" onclick="changeChannel('1197')"><strong>1197</strong></button>
+												  <button type="button" class="btn btn-default" onclick="changeChannel('940')"><strong>94.0</strong></button>
+												  <button type="button" class="btn btn-default" onclick="changeChannel('981')"><strong>98.1</strong></button>
+                                                  <button type="button" class="btn btn-default" onclick="changeChannel('zb1')"><strong>转播1</strong></button>
+                                                  <button type="button" class="btn btn-default" onclick="changeChannel('zb2')"><strong>转播2</strong></button>
+												</div>
+												
+												<div class="art-content-layout-wrapper layout-item-old-0" style="margin-top:10px">
+													<div class="art-content-layout layout-item-old-1">
+														<div class="art-content-layout-row">
+															<div class="art-layout-cell layout-item-old-2"style="width: 33%">
+																<h4 style="text-align: center;">
+																	<span class="mainfont" id="channelvalue">990</span> 
+																</h4>
+															</div>
+															<div class="art-layout-cell layout-item-old-3"
+																style="width: 34%;cursor:pointer;" id="datediv" onclick="selectDate()">
+																<h4 style='text-align: center;'>日期<input id='date' class='form-control form-inline nav navbar-nav' style='width: 120px; margin-top: 8px; margin-left: 10px;' value='' readonly /></h4>
+															</div>
+															<div class="art-layout-cell layout-item-old-4"
+																style="width: 33%" id="download">
+																<h4 style="text-align: center;">
+																	<span class="mainfont" id="tip"><a href="#" target="_blank" class="mainfont" id="hourvalue" style="font-family:'Comic Sans MS';font-size:36px;cursor:pointer;">0:00~1:00</a></span>
+																</h4>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="art-content-layout-wrapper layout-item-old-0">
+													<div class="art-content-layout layout-item-old-1">
+														<div class="art-content-layout-row">
+															<div class="art-layout-cell layout-item-old-3"style="width: 100%">
+																<audio id="1" style="width: 100%; margin-top: 5px;"src="" controls="controls">
+																</audio>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="art-content-layout-wrapper layout-item-old-0">
+													<div class="art-content-layout layout-item-old-1">
+														<div class="art-content-layout-row">
+															<div class="timetable art-layout-cell layout-item-old-2"
+																style="width: 33%;cursor:pointer;" id="hour00" onclick="playback('00')">
+																0:00~1:00
+															</div>
+															<div class="timetable art-layout-cell layout-item-old-3"
+																style="width: 34%;cursor:pointer;" id="hour01" onclick="playback('01')">
+																1:00~2:00
+															</div>
+															<div class="timetable art-layout-cell layout-item-old-4"
+																style="width: 33%;cursor:pointer;" id="hour02" onclick="playback('02')">
+																2:00~3:00
+															</div>
+														</div>
+														<div class="art-content-layout-row">
+															<div class="timetable art-layout-cell layout-item-old-2"
+																style="width: 33%;cursor:pointer;" id="hour03" onclick="playback('03')">
+																3:00~4:00
+															</div>
+															<div class="timetable art-layout-cell layout-item-old-3"
+																style="width: 34%;cursor:pointer;" id="hour04" onclick="playback('04')">
+																4:00~5:00
+															</div>
+															<div class="timetable art-layout-cell layout-item-old-4"
+																style="width: 33%;cursor:pointer;" id="hour05" onclick="playback('05')">
+																5:00~6:00
+															</div>
+														</div>
+														<div class="art-content-layout-row">
+															<div class="timetable art-layout-cell layout-item-old-2"
+																style="width: 33%;cursor:pointer;" id="hour06" onclick="playback('06')">
+																6:00~7:00
+															</div>
+															<div class="timetable art-layout-cell layout-item-old-3"
+																style="width: 34%;cursor:pointer;" id="hour07" onclick="playback('07')">
+																7:00~8:00
+															</div>
+															<div class="timetable art-layout-cell layout-item-old-4"
+																style="width: 33%;cursor:pointer;" id="hour08" onclick="playback('08')">
+																8:00~9:00
+															</div>
+														</div>
+														<div class="art-content-layout-row">
+															<div class="timetable art-layout-cell layout-item-old-2"
+																style="width: 33%;cursor:pointer;" id="hour09" onclick="playback('09')">
+																9:00~10:00
+															</div>
+															<div class="timetable art-layout-cell layout-item-old-3"
+																style="width: 34%;cursor:pointer;" id="hour10" onclick="playback('10')">
+																10:00~11:00
+															</div>
+															<div class="timetable art-layout-cell layout-item-old-4"
+																style="width: 33%;cursor:pointer;" id="hour11" onclick="playback('11')">
+																11:00~12:00
+															</div>
+														</div>
+														<div class="art-content-layout-row">
+															<div class="timetable art-layout-cell layout-item-old-2"
+																style="width: 33%;cursor:pointer;" id="hour12" onclick="playback('12')">
+																12:00~13:00
+															</div>
+															<div class="timetable art-layout-cell layout-item-old-3"
+																style="width: 34%;cursor:pointer;" id="hour13" onclick="playback('13')">
+																13:00~14:00
+															</div>
+															<div class="timetable art-layout-cell layout-item-old-4"
+																style="width: 33%;cursor:pointer;" id="hour14" onclick="playback('14')">
+																14:00~15:00
+															</div>
+														</div>
+														<div class="art-content-layout-row">
+															<div class="timetable art-layout-cell layout-item-old-2"
+																style="width: 33%;cursor:pointer;" id="hour15" onclick="playback('15')">
+																15:00~16:00
+															</div>
+															<div class="timetable art-layout-cell layout-item-old-3"
+																style="width: 34%;cursor:pointer;" id="hour16" onclick="playback('16')">
+																16:00~17:00
+															</div>
+															<div class="timetable art-layout-cell layout-item-old-4"
+																style="width: 33%;cursor:pointer;" id="hour17" onclick="playback('17')">
+																17:00~18:00
+															</div>
+														</div>
+														<div class="art-content-layout-row">
+															<div class="timetable art-layout-cell layout-item-old-2"
+																style="width: 33%;cursor:pointer;" id="hour18" onclick="playback('18')">
+																18:00~19:00
+															</div>
+															<div class="timetable art-layout-cell layout-item-old-3"
+																style="width: 34%;cursor:pointer;" id="hour19" onclick="playback('19')">
+																19:00~20:00
+															</div>
+															<div class="timetable art-layout-cell layout-item-old-4"
+																style="width: 33%;cursor:pointer;" id="hour20" onclick="playback('20')">
+																20:00~21:00
+															</div>
+														</div>
+														<div class="art-content-layout-row">
+															<div class="timetable art-layout-cell layout-item-old-2"
+																style="width: 33%;cursor:pointer;" id="hour21" onclick="playback('21')">
+																21:00~22:00
+															</div>
+															<div class="timetable art-layout-cell layout-item-old-3"
+																style="width: 34%;cursor:pointer;" id="hour22" onclick="playback('22')">
+																22:00~23:00
+															</div>
+															<div class="timetable art-layout-cell layout-item-old-4"
+																style="width: 33%;cursor:pointer;" id="hour23" onclick="playback('23')">
+																23:00~24:00
+															</div>
+														</div>
+													</div>
+												
+												</div>
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+
+
+
+							</article>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="art-footer">
+			<div class="art-footer-inner">
+				<br>
+				<br>
+				<p>
+					<a href="#"></a>
+				</p>
+				<span
+					style="color: rgb(255, 255, 255); font-family: arial, 'Hiragino Sans GB', 'Microsoft Yahei', 微软雅黑, 宋体, 宋体, Tahoma, Arial, Helvetica, STHeiti; font-size: 12px; word-spacing: 3px;">©2014
+					radio.smgtech.net</span><br>
+				<br>
+			</div>
+		</footer>
+
+	</div>
+	
+	<script>
+		
+		function selectDate()
+		{
+				$("#datediv").html("<h4 style='text-align: center;'>日期<input id='date' class='form-control form-inline nav navbar-nav' style='width: 120px; margin-top: 8px; margin-left: 10px;' value='' readonly /></h4>");
+				var pickerOpts = {
+					minDate : "-60",
+					maxDate : new Date(),
+					dateFormat : "yy_mm_dd",
+					monthNames : [ "一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月",
+							"九月", "十月", "十一月", "十二月" ],
+					monthNamesShort : [ "一", "二", "三", "四", "五", "六", "七", "八",
+							"九", "十", "十一", "十二" ],
+					dayNames : [ "日", "一", "二", "三", "四", "五", "六" ],
+					dayNamesShort : [ "日", "一", "二", "三", "四", "五", "六" ],
+					dayNamesMin : [ "日", "一", "二", "三", "四", "五", "六" ]
+				};
+				$("#date").datepicker(pickerOpts);
+
+				$("#date").change(function(){  
+					$("#datediv").html("<h4 style='text-align: center;'><span class='mainfont' id='datevalue'>"+$("#date").val()+"</span></h4>"); 
+		      	}); 
+				
+				var audio1=document.getElementById(1);
+				audio1.src="";
+				
+				var dateString=$("#datevalue").html();
+				var channelString=$("#channelvalue").html();
+				$("#hourvalue").html("0:00~1:00");
+				setLink(channelString, dateString, "00");
+		}
+		
+		function playback(num)
+		{
+			var dateString=$("#datevalue").html();
+			var channelString=$("#channelvalue").html();
+			var audio1=document.getElementById(1);
+			if (dateString==null)
+			{
+				alert("请选择日期");
+			}
+			else
+			{
+				switch (num)
+				{
+					case "00":
+					  $("#hourvalue").html("0:00~1:00");
+					  break;
+					case "01":
+					  $("#hourvalue").html("1:00~2:00");
+					  break;
+					case "02":
+					  $("#hourvalue").html("2:00~3:00");
+					  break;
+					case "03":
+					  $("#hourvalue").html("3:00~4:00");
+					  break;
+					case "04":
+					  $("#hourvalue").html("4:00~5:00");
+					  break;
+					case "05":
+					  $("#hourvalue").html("5:00~6:00");
+					  break;
+					case "06":
+					  $("#hourvalue").html("6:00~7:00");
+					  break;
+					case "07":
+					  $("#hourvalue").html("7:00~8:00");
+					  break;
+					case "08":
+					  $("#hourvalue").html("8:00~9:00");
+					  break;
+					case "09":
+					  $("#hourvalue").html("9:00~10:00");
+					  break;
+					case "10":
+					  $("#hourvalue").html("10:00~11:00");
+					  break;
+					case "11":
+					  $("#hourvalue").html("11:00~12:00");
+					  break;
+					case "12":
+					  $("#hourvalue").html("12:00~13:00");
+					  break;
+					case "13":
+					  $("#hourvalue").html("13:00~14:00");
+					  break;
+					case "14":
+					  $("#hourvalue").html("14:00~15:00");
+					  break;
+					case "15":
+					  $("#hourvalue").html("15:00~16:00");
+					  break;
+					case "16":
+					  $("#hourvalue").html("16:00~17:00");
+					  break;
+					case "17":
+					  $("#hourvalue").html("17:00~18:00");
+					  break;
+					case "18":
+					  $("#hourvalue").html("18:00~19:00");
+					  break;
+					case "19":
+					  $("#hourvalue").html("19:00~20:00");
+					  break;
+					case "20":
+					  $("#hourvalue").html("20:00~21:00");
+					  break;
+					case "21":
+					  $("#hourvalue").html("21:00~22:00");
+					  break;
+					case "22":
+					  $("#hourvalue").html("22:00~23:00");
+					  break;
+					case "23":
+					  $("#hourvalue").html("23:00~24:00");
+					  break;
+					default:
+				  		$("#hourvalue").html("未选择");
+				}
+				setAudio(channelString, dateString, num);
+				audio1.autoplay="autoplay";
+				setLink(channelString, dateString, num);
+			}
+			
+		}
+		
+		$(document).ready(function() {
+
+			$("#tip").poshytip('show');
+			Date.prototype.format = function(format) {
+				var date = {
+					"M+" : this.getMonth() + 1,
+					"d+" : this.getDate(),
+					"h+" : this.getHours(),
+					"m+" : this.getMinutes(),
+					"s+" : this.getSeconds(),
+					"q+" : Math.floor((this.getMonth() + 3) / 3),
+					"S+" : this.getMilliseconds()
+				};
+				if (/(y+)/i.test(format)) {
+					format = format.replace(RegExp.$1,
+							(this.getFullYear() + '')
+									.substr(4 - RegExp.$1.length));
+				}
+				for ( var k in date) {
+					if (new RegExp("(" + k + ")").test(format)) {
+						format = format.replace(RegExp.$1,
+								RegExp.$1.length == 1 ? date[k]
+										: ("00" + date[k])
+												.substr(("" + date[k]).length));
+					}
+				}
+				return format;
+			}
+			var today = new Date().format('yyyy_MM_dd');
+			$("#datediv").html("<h4 style='text-align: center;'><span class='mainfont' id='datevalue'>"+today+"</span></h4>");
+			var dateString=$("#datevalue").html();
+			var channelString=$("#channelvalue").html();
+			setLink(channelString, dateString, "00");
+	      });
+		
+		function changeChannel(name)
+		{
+			$("#channelvalue").html(name);
+			var audio1=document.getElementById(1);
+			audio1.src="";
+			
+			var dateString=$("#datevalue").html();
+			var channelString=$("#channelvalue").html();
+			$("#hourvalue").html("0:00~1:00");
+			setLink(channelString,dateString, "00");
+		}
+
+		function setLink(channelString,dateString,num) {
+		    if (channelString=="zb1"){
+		        $("#hourvalue").attr("href", "http://172.27.246.12:8010/Record/" + channelString + "/" + channelString + "_" + dateString + "_" + num + ".mp4");
+		    }
+		    else if (channelString == "zb2") {
+		        $("#hourvalue").attr("href", "http://172.27.246.22:8010/Record/" + channelString + "/" + channelString + "_" + dateString + "_" + num + ".mp4");
+		    }
+		    else {
+		        $("#hourvalue").attr("href", "http://172.27.246.1:8010/Record/" + channelString + "/" + channelString + "_" + dateString + "_" + num + ".mp4");
+		    }
+		}
+
+		function setAudio(channelString, dateString, num) {
+		    var audio1 = document.getElementById(1);
+		    if (channelString == "zb1") {
+		        audio1.src = href = "http://180.166.202.74:8010/Record/" + channelString + "/" + channelString + "_" + dateString + "_" + num + ".mp4";
+		    }
+		    else if (channelString == "zb2") {
+		        audio1.src = href = "http://180.166.202.74:8011/Record/" + channelString + "/" + channelString + "_" + dateString + "_" + num + ".mp4";
+		    }
+		    else {
+		        audio1.src = href = "http://radio.smgtech.net:8010/Record/" + channelString + "/" + channelString + "_" + dateString + "_" + num + ".mp4";
+		    }
+		}
+	$("#tip").poshytip({
+		content:'下载音频方式：鼠标右键另存为本地文件',
+		showOn:'none',
+		alignTo:'target',
+		alignX:'inner-left',
+		offsetX:0,
+		offsetY:-5
+	});
+	</script>
+</body>
+</html>
